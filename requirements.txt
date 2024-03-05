@@ -2,3 +2,5 @@ requests
 websocket
 websocket-client
 Flask
+rfile
+environement

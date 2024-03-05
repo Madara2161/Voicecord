@@ -3,7 +3,7 @@ import sys
 import json
 import time
 import requests
-from websocket import create_connection
+import websocket
 from keep_alive import keep_alive
 
 status = "online" #online/dnd/idle
@@ -31,7 +31,7 @@ discriminator = userinfo["discriminator"]
 userid = userinfo["id"]
 
 def joiner(token, status):
-    ws = create_connection('wss://gateway.discord.gg/?v=9&encoding=json')
+    ws = websocket.create_connection('wss://gateway.discord.gg/?v=9&encoding=json')
     start = json.loads(ws.recv())
     heartbeat = start['d']['heartbeat_interval']
     auth = {"op": 2,"d": {"token": token,"properties": {"$os": "Windows 10","$browser": "Google Chrome","$device": "Windows"},"presence": {"status": status,"afk": False}},"s": None,"t": None}

@@ -4,3 +4,4 @@ websocket-client
 Flask
 environ
 rfile
+websocket-client

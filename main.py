@@ -6,10 +6,6 @@ import requests
 import websocket
 from keep_alive import keep_alive
 
-pip install environ
-pip install socket
-pip install rfile
-
 status = "online" #online/dnd/idle
 
 GUILD_ID = 1151414387056332820
